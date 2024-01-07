@@ -12,7 +12,6 @@ def clean_recommendation(recommendation):
 def process_cis_pdf(pdf_filename, excel_filename):
     with pdfplumber.open(pdf_filename) as pdf:
         pages = pdf.pages[2:]
-
         recommendations = []
         extracting = False
         for page in pages:
